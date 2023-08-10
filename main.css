@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 50px 0;
+    color: #4cf090;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.6s;
+    letter-spacing: 5px;
+    -webkit-box-reflect: below 1px
+    linear-gradient(transparent, #0005)
+}
+a:nth-child(1){
+    filter: hue-rotate(290deg);
+}
+a:hover{
+    background: #4cf090;
+    color: #051700;
+    box-shadow: 0 0 5px #4cf090,
+        0 0 25px #4cf090,
+        0 0 50px #4cf090,
+        0 0 200px #4cf090;
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100px;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg,
+    transparent, #4cf090);
+    animation: animacao1 1s linear infinite;
+}
+@keyframes animacao1{
+    0%{
+        left: -100px;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+}
+
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,
+    #4cf090);
+    animation: animacao2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animacao2{
+    0%{
+        top: -100%;
+    }
+    50%,
+    100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,
+    #4cf090);
+    animation: animacao3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animacao3{
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,
+    #4cf090);
+    animation: animacao4 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animacao4{
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+}
